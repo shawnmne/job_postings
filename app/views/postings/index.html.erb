@@ -1,0 +1,19 @@
+<h1>Job Postings</h1>
+
+<% if flash[:notice] %>
+  <div class="flash notice">
+    <p><%= flash[:notice] %></p>
+  </div>
+<% end %>
+
+
+<% if @postings.any? %>
+	<ul>
+		<% @postings.each do |p| %>
+			<li><%= link_to p.job_title, posting_path(p) %></li>
+		<% end %>
+	</ul>
+<% else %>
+	<p>Sorry.  No postings here!</p>
+<% end %>
+<p><%= link_to "New Posting", new_posting_path %></p>

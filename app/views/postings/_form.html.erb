@@ -1,0 +1,25 @@
+<%= form_for @posting do |p| %>
+	<div>
+		<%= p.label :company_name %>
+		<%= p.text_field :company_name %>
+	</div>
+	<div>
+		<%= p.label :job_title %>
+		<%= p.text_field :job_title %>
+	</div>
+	<div>
+		<%= p.label :description %>
+		<%= p.text_field :description %>
+	</div>
+	<div>
+		<%= p.label :location %>
+		<%= p.text_field :location %>
+	</div>
+	<div>
+		<%= p.label :how_to_apply %>
+		<%= p.text_field :how_to_apply %>
+	</div>
+	<div>
+		<%= p.submit %>
+	</div>
+<% end %>	

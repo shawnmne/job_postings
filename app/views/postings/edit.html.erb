@@ -1,0 +1,19 @@
+<h1>Edit Job Posting</h1>
+
+<% if @posting.errors.any? %>
+  <ul>
+    <% @posting.errors.full_messages.each do |e| %>
+      <li><%= e %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<% if flash[:alert] %>
+  <div class="flash alert">
+    <p><%= flash[:alert] %></p>
+  </div>
+<% end %>
+
+<%= render "form" %>
+
+<%= link_to "Delete Posting", posting_path(@posting), :method=>:delete %>

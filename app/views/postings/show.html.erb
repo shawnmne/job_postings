@@ -1,0 +1,17 @@
+<h1>Job Title: <%= @posting.job_title %></h1>
+
+<% if flash[:notice] %>
+  <div class="flash notice">
+    <p><%= flash[:notice] %></p>
+  </div>
+<% end %>
+
+
+<p>Company Name: <%= @posting.company_name %></p>
+<p>Description: <%= @posting.description %></p>
+<p>Location: <%= @posting.location %></p>
+<p>Apply By:<%= @posting.how_to_apply %></p>
+
+
+<p><%= link_to "Edit Posting", edit_posting_path(@posting) %></p>
+<p><%= link_to "All Postings", :postings %></p>
